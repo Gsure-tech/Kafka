@@ -13,4 +13,10 @@ public class KafkaTopicConfig {
         return TopicBuilder.name("gsuretech")
                 .build();
     }
+
+    @Bean
+    public NewTopic gsuretechJsonTopic(){
+        return TopicBuilder.name("gsuretech_json")
+                .build();
+    }
 }
