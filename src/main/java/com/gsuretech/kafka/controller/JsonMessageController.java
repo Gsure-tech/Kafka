@@ -14,6 +14,7 @@ public class JsonMessageController {
 
     private JsonKafkaProducer kafkaProducer;
 
+
     public JsonMessageController(JsonKafkaProducer kafkaProducer) {
         this.kafkaProducer = kafkaProducer;
     }
