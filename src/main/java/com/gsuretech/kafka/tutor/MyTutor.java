@@ -11,6 +11,7 @@ public class MyTutor {
             if (n % 2!=0){
 
                 odd[0]=n;
+                System.out.println(n);
             }
         }
 
