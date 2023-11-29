@@ -4,6 +4,7 @@ import com.gsuretech.kafka.kafka.KafkaProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Scanner;
 import java.util.UUID;
 
 public class Encapsulation {
@@ -21,6 +22,16 @@ public class Encapsulation {
         customer1.setLastName("Benjamin");
         customer1.setIdentityNumber(UUID.randomUUID().toString());
         LOGGER.info("displaying account details for {} " , customer1.getFirstName());
-        System.out.println("\nFirstname " + customer1.getFirstName()  + "\nSurname " + customer1.getLastName() + "\nIdentity number " + customer1.getIdentityNumber());
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please Enter Firstname");
+        String first = scanner.nextLine();
+        System.out.println("Please Enter Surname");
+        String surname = scanner.nextLine();
+        String nin = UUID.randomUUID().toString();
+
+       // System.out.println("\nFirstname " + customer1.getFirstName()  + "\nSurname " + customer1.getLastName() + "\nIdentity number " + customer1.getIdentityNumber());
+        System.out.println("\nFirstname " + first + "\nSurname " + surname + "\nIdentity number " + nin);
+
     }
 }
