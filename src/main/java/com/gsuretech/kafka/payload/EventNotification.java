@@ -5,14 +5,12 @@ import java.util.HashMap;
 public class EventNotification {
 
     private static final long serialVersionUID = 1L;
-    private Long id;
     private String notificationId = null;
     private String sender = null;
     private String receiver = null;
     private String notificationType = null;
     private String eventName = null;
     private String description = null;
-    private String senderUrl = null;
     private String destinationUrl = null;
     private String timeReceived = null;
     private int retentionSecs;
@@ -23,13 +21,6 @@ public class EventNotification {
     public EventNotification() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNotificationId() {
         return notificationId;
@@ -79,13 +70,6 @@ public class EventNotification {
         this.description = description;
     }
 
-    public String getSenderUrl() {
-        return senderUrl;
-    }
-
-    public void setSenderUrl(String senderUrl) {
-        this.senderUrl = senderUrl;
-    }
 
     public String getDestinationUrl() {
         return destinationUrl;
@@ -138,14 +122,12 @@ public class EventNotification {
     @Override
     public String  toString() {
         return "EventNotification{" +
-                "id=" + id +
                 ", notificationId='" + notificationId + '\'' +
                 ", sender='" + sender + '\'' +
                 ", receiver='" + receiver + '\'' +
                 ", notificationType='" + notificationType + '\'' +
                 ", eventName='" + eventName + '\'' +
                 ", description='" + description + '\'' +
-                ", senderUrl='" + senderUrl + '\'' +
                 ", destinationUrl='" + destinationUrl + '\'' +
                 ", timeReceived='" + timeReceived + '\'' +
                 ", retentionSecs=" + retentionSecs +
