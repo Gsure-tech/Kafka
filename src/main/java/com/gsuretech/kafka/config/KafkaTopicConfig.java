@@ -16,7 +16,7 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic gsuretechJsonTopic(){
-        return TopicBuilder.name("gsuretech_json")
+        return TopicBuilder.name("ENROLLMENT_RESPONSE-CREATE")
                 .build();
     }
 }

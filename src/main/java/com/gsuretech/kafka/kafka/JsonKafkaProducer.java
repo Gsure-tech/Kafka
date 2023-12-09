@@ -1,5 +1,6 @@
 package com.gsuretech.kafka.kafka;
 
+import com.gsuretech.kafka.payload.EventNotification;
 import com.gsuretech.kafka.payload.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,19 @@ public class JsonKafkaProducer {
 
         Message<User> message = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC, "gsuretech_json")
+                .setHeader(KafkaHeaders.TOPIC, "ENROLLMENT_RESPONSE-CREATE-3")
+                .build();
+
+        kafkaTemplate.send(message);
+    }
+
+    public void sendEventNotification(EventNotification event){
+
+        LOGGER.info(String.format("Message sent -> %s", event.toString()));
+
+        Message<EventNotification> message = MessageBuilder
+                .withPayload(event)
+                .setHeader(KafkaHeaders.TOPIC, "ENROLLMENT_RESPONSE-CREATE-3")
                 .build();
 
         kafkaTemplate.send(message);
